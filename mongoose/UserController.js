@@ -20,16 +20,3 @@ userController.createUser = async ({ name, age, married }) => {
     console.log(e.message);
   }
 };
-
-userController.updateUser = async (comment) => {
-  try {
-    const updateUser = await User.findByIdAndUpdate(comment.author, {
-      comment: comment._id,
-    }, {
-      returnOriginal: false,
-    });
-    return updateUser;
-  } catch (e) {
-    console.log(e.message);
-  }
-}

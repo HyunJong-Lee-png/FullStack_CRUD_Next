@@ -17,20 +17,3 @@ export async function POST(request) {
   }
   return NextResponse.json({ ok: false });
 };
-
-// export async function PATCH(request) {
-//   await dbConnect();
-//   const updateUserData = await request.json();
-//   const newComment = await commentController.createComment(updateUserData);
-//   if (newComment) {
-//     const updateUser = await userController.updateUser(newComment);
-//     if (updateUser) {
-//       const populatedUser = await updateUser.populate('comment');
-//       if (populatedUser) {
-//         return NextResponse.json({ ok: true, ...populatedUser });
-//       }
-//     }
-//   }
-
-//   return NextResponse.json({ ok: false });
-// }

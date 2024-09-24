@@ -14,11 +14,7 @@ const UserSchema = new mongoose.Schema({
     type: Boolean,
     default: false,
   },
-  comment: {
-    type: mongoose.Schema.ObjectId,
-    ref: 'comment',
-  }
-
+  comment: String,
 }, { timestamps: true });
 
 export default mongoose.models.user || mongoose.model('user', UserSchema);
